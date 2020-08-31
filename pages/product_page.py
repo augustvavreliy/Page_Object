@@ -15,3 +15,11 @@ class ProductPage(BasePage):
         alert_text = self.browser.find_element(*ProductPageLocators.PRICE_MESSAGE).get_attribute("innerText") 
         product_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE).get_attribute("innerText")
         assert alert_text in product_price, f"Product price should be: {product_price}, contains : {alert_text}"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+       "Success message is presented, but should not be"
+    
+    def should_message_disappeared_after_adding_product_to_basket(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+        "Success message NOT is disappeared, but should"
