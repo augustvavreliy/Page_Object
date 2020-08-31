@@ -1,0 +1,12 @@
+{
+    "spellright.language": [
+        "en",
+        "ru"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "python.pythonPath": "c:\\Users\\augus\\Projects\\selenium_env\\Scripts\\python.exe"
+}
